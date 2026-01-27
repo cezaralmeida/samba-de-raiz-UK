@@ -1,19 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	theme: {
-		extend: {
-			colors: {
-				// Your Custom Design Tokens
-				'samba-brand': '#228B22', // Forest Green
-				'samba-accent': '#FFD700', // Gold
-				'samba-dark': '#1a1a1a',   // Dark Grey (for text)
-				'samba-light': '#f3f4f6',  // Light Grey (for backgrounds)
-			},
-			fontFamily: {
-				sans: ['Helvetica', 'Arial', 'sans-serif'],
-			}
-		},
-	},
-	plugins: [],
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  theme: {
+    extend: {
+      fontFamily: {
+        // "Abril Fatface" looks similar to the serif font in your image
+        serif: ['"Abril Fatface"', 'serif'],
+        sans: ['Inter', 'sans-serif'],
+      },
+      colors: {
+        'samba-red': '#D00000',
+        'samba-orange': '#FF4500',
+      },
+      backgroundImage: {
+        // This creates the sunburst effect without needing an image file
+        'sunburst': 'repeating-conic-gradient(#D00000 0% 5%, #FF2400 5% 10%)',
+      }
+    },
+  },
+  plugins: [],
 }

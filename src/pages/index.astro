@@ -2,54 +2,65 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Samba de Raiz UK - Official Site">
-  
-  <section class="min-h-screen flex items-center justify-center bg-samba-light text-center px-4">
-    <div class="max-w-3xl">
-      <h1 class="text-5xl md:text-7xl font-bold text-samba-dark mb-6">
-        Welcome to <span class="text-samba-brand">Samba de Raiz UK</span>
-      </h1>
-      <p class="text-xl text-gray-600 mb-10">
-        Bringing the authentic rhythm, joy, and roots of Brazilian Samba to the UK.
-      </p>
-      <div class="flex gap-4 justify-center">
-        <a href="#contact" class="bg-samba-brand text-white px-8 py-4 rounded-full text-lg font-bold shadow-lg hover:bg-samba-accent hover:text-samba-dark transition transform hover:-translate-y-1">
-          Book Us Now
-        </a>
-        <a href="#about" class="border-2 border-samba-dark text-samba-dark px-8 py-4 rounded-full text-lg font-bold hover:bg-samba-dark hover:text-white transition">
-          Learn More
-        </a>
+<Layout title="Samba de Raiz UK">
+  <main class="relative w-full min-h-screen overflow-hidden bg-sunburst flex flex-col items-center">
+    
+    <nav class="w-full flex justify-between items-center p-6 text-white z-50 max-w-7xl mx-auto font-sans text-sm font-semibold tracking-wide">
+      <div class="flex gap-6 hidden md:flex">
+        <a href="#about" class="hover:opacity-80 transition">Quem somos</a>
+        <a href="#photos" class="hover:opacity-80 transition">Fotos</a>
+        <a href="#events" class="hover:opacity-80 transition">Próximos Eventos</a>
+        <a href="#contact" class="hover:opacity-80 transition">Contato</a>
       </div>
+      
+      <div class="absolute left-1/2 transform -translate-x-1/2 top-4">
+        <img src="/logo.svg" alt="Samba Logo" class="h-20 w-auto" /> 
+      </div>
+
+      <div class="flex items-center gap-4 ml-auto md:ml-0">
+        <a href="#" class="border border-white px-5 py-2 rounded-md text-xs font-bold hover:bg-white hover:text-red-700 transition">
+          GET TICKETS
+        </a>
+        <span class="text-xs font-bold cursor-pointer hidden md:block">🇺🇸 English (US) ⌄</span>
+      </div>
+    </nav>
+
+    <div class="relative z-10 flex flex-col items-center justify-center flex-grow w-full max-w-7xl mt-12 px-4">
+      
+      <h1 class="font-serif text-center text-white text-5xl md:text-8xl leading-[0.9] drop-shadow-lg z-20 italic">
+        SINTA A ENERGIA.<br/>
+        VIVA A TRADIÇÃO.<br/>
+        ENTRE NA RODA.
+      </h1>
+
+      <div class="absolute bottom-0 z-10 w-[300px] md:w-[450px]">
+         <img src="/man.png" alt="Samba Dancer" class="w-full h-auto object-contain" />
+      </div>
+
+      <div class="absolute bottom-10 z-30">
+        <button class="bg-white text-black font-bold px-8 py-3 rounded-full shadow-2xl hover:scale-105 transition transform text-xs tracking-widest uppercase">
+          Reserve seu lugar na roda
+        </button>
+      </div>
+
+      <img src="/arara.png" class="hidden md:block absolute top-10 right-0 w-48 animate-bounce-slow z-20" alt="" />
+      <img src="/arara.png" class="hidden md:block absolute top-32 right-32 w-32 z-10 opacity-90" alt="" />
     </div>
-  </section>
 
-  <section id="about" class="py-24 px-4 bg-white">
-    <div class="container mx-auto max-w-4xl text-center">
-      <h2 class="text-4xl font-bold text-samba-dark mb-8 relative inline-block">
-        About Us
-        <span class="absolute bottom-0 left-0 w-full h-2 bg-samba-accent opacity-60"></span>
-      </h2>
-	  <img src="/samba-main.jpg" alt="Samba de Raiz Band" class="rounded-xl shadow-lg w-full max-w-4xl mx-auto mb-8" />
-
-      <p class="text-xl text-gray-700 leading-relaxed mb-6">
-        Samba de Raiz UK is a collective of passionate musicians dedicated to preserving the authentic roots of Samba. 
-      </p>
-      <p class="text-xl text-gray-700 leading-relaxed">
-        From the backyard *rodas* of Rio to the stages of London, we bring the true energy of Brazilian percussion, cavaquinho, and harmony. We aren't just a band; we are a community celebrating culture.
-      </p>
+    <div class="absolute bottom-0 w-full z-20 h-48 md:h-64">
+       <img src="/sea.png" class="w-full h-full object-cover" alt="Waves" />
     </div>
-  </section>
 
-  <section id="contact" class="py-24 px-4 bg-samba-dark text-white">
-    <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-8 text-samba-accent">Get in Touch</h2>
-      <p class="text-xl mb-10 text-gray-300">
-        Planning an event? Want to join our next roda? We would love to hear from you.
-      </p>
-      <a href="mailto:info@sambaderaiz.uk" class="text-2xl font-bold underline decoration-samba-brand underline-offset-8 hover:text-samba-accent transition">
-        info@sambaderaiz.uk
-      </a>
-    </div>
-  </section>
-
+  </main>
 </Layout>
+
+<style>
+  /* Slow float animation for the birds */
+  .animate-bounce-slow {
+    animation: bounce 4s infinite ease-in-out;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(-5%); }
+    50% { transform: translateY(5%); }
+  }
+</style>
