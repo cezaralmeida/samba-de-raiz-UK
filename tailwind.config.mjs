@@ -1,10 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: [
+    './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+    // Add this line so Tailwind sees Flowbite's classes
+    './node_modules/flowbite/**/*.js'
+  ],
   theme: {
     extend: {
       fontFamily: {
-        // "Abril Fatface" looks similar to the serif font in your image
         serif: ['"Abril Fatface"', 'serif'],
         sans: ['Inter', 'sans-serif'],
       },
@@ -13,10 +16,12 @@ export default {
         'samba-orange': '#FF4500',
       },
       backgroundImage: {
-        // This creates the sunburst effect without needing an image file
         'sunburst': 'repeating-conic-gradient(#D00000 0% 5%, #FF2400 5% 10%)',
       }
     },
   },
-  plugins: [],
+  // Add the Flowbite plugin here
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }

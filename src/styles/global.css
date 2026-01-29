@@ -1,7 +1,27 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+@import "flowbite/src/themes/default";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../../node_modules/flowbite";
+
+
+
 
 html {
   scroll-behavior: smooth;
 }
+
+/* Reusable classes for nav and buttons */
+.nav-link {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  color: #fff;
+  border-radius: 0.375rem;
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: #fde047;
+}
+
+
